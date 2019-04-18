@@ -1,7 +1,7 @@
 <h1>
-  <%= @p1_name %> vs. <%= @p2_name %>
+  <%= @p1_name %>: <%= @p1_hp %>hp vs. <%= @p2_name %>: <%= @p2_hp %>hp
 </h1>
-<h2>
-  <%= @p1_name %>: <%= @p1_hp %>hp
-  <%= @p2_name %>: <%= @p2_hp %>hp
-</h2>
+
+<form action="/attack" method="post">
+  <input type="submit" value="ATTACK" >
+</form>
