@@ -2,8 +2,9 @@ require './player.rb'
 
 describe Player do
 
+  let(:bob) { Player.new("Bob") }
+
   it 'give the class a method that returns its name' do
-    player = Player.new("Bob")
-    expect(player.name).to eq "Bob"
+    expect(bob.name).to eq "Bob"
   end
 end
