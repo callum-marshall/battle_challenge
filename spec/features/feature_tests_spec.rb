@@ -31,3 +31,7 @@ feature 'Attacking player' do
     expect(page).to have_content 'Callum attacked Gui'
   end
 end
+
+# As Player 1,
+# So I can start to lose a game of Battle,
+# I want Player 2's attack to reduce my HP by 10
