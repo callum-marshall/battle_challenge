@@ -17,20 +17,21 @@ class Battle < Sinatra::Base
   get '/play' do
     @p1_name = $p1.name
     @p2_name = $p2.name
-    @p1_hp = 100
-    @p2_hp = 100
+    @p1_hp = $p1.hp
+    @p2_hp = $p2.hp
     erb :play
   end
 
   post '/attack' do
+    $p1.attack($p2)
     redirect '/result'
   end
 
   get '/result' do
     @p1_name = $p1.name
     @p2_name = $p2.name
-    @p1_hp = 100
-    @p2_hp = 80
+    @p1_hp = $p1.hp
+    @p2_hp = $p2.hp
     erb :result
   end
 

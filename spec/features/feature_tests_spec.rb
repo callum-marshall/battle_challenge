@@ -35,3 +35,15 @@ end
 # As Player 1,
 # So I can start to lose a game of Battle,
 # I want Player 2's attack to reduce my HP by 10
+
+# As Player 1,
+# So I can start to win a game of Battle,
+# I want my attack to reduce Player 2's HP by 10
+
+feature 'Attack reduces hp' do
+  scenario 'lower player hp by 10 when attacked by other player' do
+    sign_in_and_play
+    click_button 'ATTACK'
+    expect(page).to have_content '90hp'
+  end
+end
